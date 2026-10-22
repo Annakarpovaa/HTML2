@@ -1,0 +1,251 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Солнечная система</title>
+
+    <!-- Подключение Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Подключение Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.05) 1%, transparent 1%), radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.03) 1%, transparent 1%);
+            background-size: 20px 20px;
+        }
+        
+        .nav-link {
+            color: #fff !important;
+        }
+        
+        .nav-link:hover {
+            color: #adb5bd !important;
+        }
+        
+        .planet-card {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .planet-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 123, 255, 0.2);
+        }
+        /* Класс для увеличения размера иконок */
+        
+        .icon-large {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .distance-info {
+            font-size: 0.9rem;
+            color: #adb5bd;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="#"><i class="bi bi-brightness-high-fill"></i> Солнечная система</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Переключить навигацию">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#planets">Планеты</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#facts">Факты</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="py-5 text-center bg-dark text-white">
+            <div class="container py-5">
+                <h1 class="display-4 fw-bold">Путешествие по Солнечной системе</h1>
+                <p class="lead col-lg-8 mx-auto">Интерактивный справочник по восьми планетам, вращающимся вокруг нашей звезды.</p>
+                <a href="#planets" class="btn btn-primary btn-lg"><i class="bi bi-arrow-down-circle"></i> Начать изучение</a>
+            </div>
+        </section>
+
+        <section id="planets" class="py-5">
+            <div class="container">
+                <h2 class="mb-4 text-center">Внутренние планеты</h2>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <article class="planet-card h-100 text-center p-4">
+                            <!-- Иконка для Меркурия -->
+                            <i class="bi bi-circle-fill icon-large text-warning"></i>
+                            <h3>Меркурий</h3>
+                            <p class="distance-info">Расстояние от Солнца: 57.9 млн км</p>
+                            <p>Самая маленькая и самая быстрая планета. У Меркурия нет атмосферы, а температура на поверхности колеблется от -180°C до +430°C.</p>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <article class="planet-card h-100 text-center p-4">
+                            <!-- Иконка для Венеры -->
+                            <i class="bi bi-brightness-high icon-large text-danger"></i>
+                            <h3>Венера</h3>
+                            <p class="distance-info">Расстояние от Солнца: 108.2 млн км</p>
+                            <p>Самая горячая планета системы из-за мощного парникового эффекта. Атмосфера состоит из углекислого газа и капель серной кислоты.</p>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <article class="planet-card h-100 text-center p-4">
+                            <!-- Иконка для Земли -->
+                            <i class="bi bi-geo-alt icon-large text-success"></i>
+                            <h3>Земля</h3>
+                            <p class="distance-info">Расстояние от Солнца: 149.6 млн км</p>
+                            <p>Единственная известная планета, на которой есть жизнь. Имеет один естественный спутник — Луну.</p>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <article class="planet-card h-100 text-center p-4">
+                            <!-- Иконка для Марса -->
+                            <i class="bi bi-exclamation-octagon icon-large text-danger"></i>
+                            <h3>Марс</h3>
+                            <p class="distance-info">Расстояние от Солнца: 227.9 млн км</p>
+                            <p>«Красная планета» из-за оксида железа в грунте. Здесь находится самая высокая гора в Солнечной системе — Олимп.</p>
+                        </article>
+                    </div>
+                </div>
+
+                <h2 class="my-4 text-center">Внешние планеты</h2>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <article class="planet-card h-100 text-center p-4">
+                            <!-- Иконка для Юпитера -->
+                            <i class="bi bi-cloud-rain-fill icon-large text-primary"></i>
+                            <h3>Юпитер</h3>
+                            <p class="distance-info">Расстояние от Солнца: 778.5 млн км</p>
+                            <p>Газовый гигант. Самая большая планета системы. Знаменит своим Большим Красным Пятном — огромным ураганом.</p>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <article class="planet-card h-100 text-center p-4">
+                            <!-- Иконка для Сатурна -->
+                            <i class="bi bi-ring icon-large text-warning"></i>
+                            <h3>Сатурн</h3>
+                            <p class="distance-info">Расстояние от Солнца: 1.434 млрд км</p>
+                            <p>Известен своей обширной системой колец, состоящих из льда и каменных частиц. Вторая по размеру планета.</p>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <article class="planet-card h-100 text-center p-4">
+                            <!-- Иконка для Урана -->
+                            <i class="bi bi-snow icon-large text-info"></i>
+                            <h3>Уран</h3>
+                            <p class="distance-info">Расстояние от Солнца: 2.871 млрд км</p>
+                            <p>Ледяной гигант, вращающийся «на боку». Его ось наклонена на 98 градусов, из-за чего на планете сменяются экстремальные сезоны.</p>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <article class="planet-card h-100 text-center p-4">
+                            <!-- Иконка для Нептуна -->
+                            <i class="bi bi-wind icon-large text-primary"></i>
+                            <h3>Нептун</h3>
+                            <p class="distance-info">Расстояние от Солнца: 4.495 млрд км</p>
+                            <p>Самая дальняя и самая ветреная планета. Скорость ветров здесь может достигать 2100 км/ч.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <aside id="facts" class="py-5 bg-primary text-white">
+            <div class="container">
+                <h2 class="mb-4 text-center">Интересные факты</h2>
+                <div class="accordion" id="factsAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            Почему Плутон больше не планета?
+                        </button>
+                    </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#factsAccordion">
+                            <div class="accordion-body">
+                                В 2006 году Международный астрономический союз ввел новое определение планеты. Плутон не смог очистить свою орбиту от других объектов пояса Койпера, поэтому его переклассифицировали в карликовую планету.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            День на Венере длиннее, чем год
+                        </button>
+                    </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#factsAccordion">
+                            <div class="accordion-body">
+                                Венера вращается вокруг своей оси очень медленно и в обратном направлении. Один оборот вокруг оси занимает 243 земных дня, а оборот вокруг Солнца — 225 дней.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            На Юпитере идет алмазный дождь
+                        </button>
+                    </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#factsAccordion">
+                            <div class="accordion-body">
+                                Мощное давление в атмосфере гиганта сжимает углерод в графит, а затем в алмазы, которые буквально падают в сторону ядра планеты.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <section id="contact" class="py-5 bg-light text-dark">
+            <div class="container">
+                <h2 class="mb-4 text-center">Свяжитесь с нами</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <form>
+                            <div class="mb-3">
+                                <label for="inputName" class="form-label">Имя</label>
+                                <input type="text" class="form-control" id="inputName" placeholder="Иван Иванов">
+                            </div>
+                            <div class="mb-3">
+                                <label for="inputEmail" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="inputEmail" placeholder="name@example.com">
+                            </div>
+                            <div class="mb-3">
+                                <label for="inputMessage" class="form-label">Сообщение</label>
+                                <textarea class="form-control" id="inputMessage" rows="4" placeholder="Ваш вопрос о космосе..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100"><i class="bi bi-send"></i> Отправить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="py-3 bg-dark text-center text-muted">
+            <div class="container">
+                <small>&copy; 2026 Проект «Солнечная система». Изучайте космос вместе с Bootstrap.</small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
